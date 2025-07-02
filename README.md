@@ -2,6 +2,34 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Environment Configuration
+
+This project uses environment variables for configuration. Before running the app, make sure to set up the appropriate environment files:
+
+- `.env`: Default environment variables
+- `.env.development`: Development environment variables (used with `npm start`)
+- `.env.production`: Production environment variables (used with `npm run build`)
+- `.env.local`: Local overrides (not committed to repository)
+
+### Required Environment Variables
+
+```
+# API Configuration
+REACT_APP_API_URL=https://ss-backend-uqx4.onrender.com  # Base API URL
+REACT_APP_COUNTRY_CODE=91                # Country code for phone numbers
+
+# Authentication Settings
+REACT_APP_TOKEN_EXPIRY_DAYS=30           # Token expiry in days
+
+# Feature Flags
+REACT_APP_ENABLE_DEBUG_LOGGING=false     # Enable debug logging
+
+# App Information
+REACT_APP_VERSION=1.0.0                  # Application version
+```
+
+Copy `.env.example` to `.env.local` and modify the values as needed for your local development environment.
+
 ## Available Scripts
 
 In the project directory, you can run:
