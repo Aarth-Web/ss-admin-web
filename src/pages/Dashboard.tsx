@@ -12,6 +12,7 @@ import {
   ArrowLeftIcon,
   ArrowRightIcon,
   PlusIcon,
+  BookOpenIcon,
 } from "@heroicons/react/24/outline";
 import { Button } from "../components/ui/Button";
 import { AddSchoolModal, SchoolCard } from "../components/schools";
@@ -78,13 +79,23 @@ const SuperAdminDashboard: React.FC = () => {
         <h1 className="text-2xl font-bold text-gray-900">
           Super Admin Dashboard
         </h1>
-        <Button
-          onClick={() => setIsAddSchoolModalOpen(true)}
-          className="flex items-center gap-1"
-        >
-          <PlusIcon className="h-5 w-5" />
-          Add School
-        </Button>
+        <div className="flex items-center gap-3">
+          <Button
+            onClick={() => navigate("/read-aloud")}
+            variant="outline"
+            className="flex items-center gap-1"
+          >
+            <BookOpenIcon className="h-5 w-5" />
+            Reading Practice
+          </Button>
+          <Button
+            onClick={() => setIsAddSchoolModalOpen(true)}
+            className="flex items-center gap-1"
+          >
+            <PlusIcon className="h-5 w-5" />
+            Add School
+          </Button>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

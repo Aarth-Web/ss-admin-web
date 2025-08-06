@@ -16,6 +16,7 @@ import { Users } from "./pages/Users";
 import { Teachers } from "./pages/Teachers";
 import { Students } from "./pages/Students";
 import { Classes } from "./pages/Classes";
+import { ReadAloud } from "./pages/ReadAloud";
 
 function App() {
   const { isAuthenticated, user } = useAuthStore();
@@ -116,6 +117,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path="/read-aloud" element={<ReadAloud />} />
         <Route path="/" element={<Navigate to={getRedirectRoute()} />} />
         <Route path="*" element={<Navigate to={getRedirectRoute()} />} />
       </Routes>
